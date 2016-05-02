@@ -1,3 +1,8 @@
 <template name="allPosts">
-	<h1>All of the posts</h1>
+	<ul>
+      {{#each posts}}
+        {{> singlePost}}
+        {{> quickRemoveButton collection="Posts" _id=this._id}}
+      {{/each}}
+    </ul>
 </template>
