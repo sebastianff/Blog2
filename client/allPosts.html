@@ -3,7 +3,10 @@
 	<ul>
       {{#each posts}}
         {{> singlePost}}
-        {{> quickRemoveButton collection="Posts" _id=this._id}}
+        <p class="waves-effect waves-light btn removePost">
+        Delete
+        </p>
+        <p><a class="waves-effect waves-light btn" href="/view/{{this._id}}">View</a></p>
       {{/each}}
     </ul>
 </container>
