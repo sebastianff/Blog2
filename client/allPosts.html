@@ -3,9 +3,11 @@
 	<ul>
       {{#each posts}}
         {{> singlePost}}
-        <p class="waves-effect waves-light btn removePost">
+        {{#if currentUser}}
+         <p class="waves-effect waves-light btn removePost">
         Delete
         </p>
+        {{/if}}
         <p><a class="waves-effect waves-light btn" href="/view/{{this._id}}">View</a></p>
       {{/each}}
     </ul>
