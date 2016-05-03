@@ -3,7 +3,7 @@ Template.allPosts.helpers({
 		return Posts.find();
 	},
 	currentUser:function(){
-		if(this.userId===Meteor.userId()){
+		if(this.author===Meteor.userId()){
 			return true;
 		}
 	}
