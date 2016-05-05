@@ -18,6 +18,6 @@ Package.on_use(function(api){
   ],
   ['client','server']);
   api.add_files('newpost.js',['client','server']);
-  api.add_files(['allPosts.html','allPosts.js'], "client");
+  api.add_files(['allPosts.html','allPosts.js','viewPost.html','singlePost.html','singlePost.js','header.html','layout.html','addPost.html','addPost.js'], "client");
   api.export('Posts', 'client');
 });
