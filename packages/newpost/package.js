@@ -11,17 +11,13 @@ Package.describe({
 });
 Package.on_use(function(api){
   api.use(
-  [
-  'iron:router',
-  'mongo',
+  [ 
   'templating',
-  'ecmascript',
-  'aldeed:autoform',
   'aldeed:collection2',
-  'aldeed:delete-button',
-  'materialize:materialize'
+  'aldeed:delete-button'
   ],
   ['client','server']);
-  api.add_files('newpost.js');
+  api.add_files('newpost.js',['client','server']);
   api.add_files(['allPosts.html','allPosts.js'], "client");
+  api.export('Posts', 'client');
 });
